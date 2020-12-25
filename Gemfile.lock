@@ -1,0 +1,20 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    byebug (11.1.3)
+    gosu (0.15.2)
+    gosu-spritesheet (0.1.0)
+      gosu (~> 0.14)
+    oj (3.10.17)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  byebug
+  gosu
+  gosu-spritesheet
+  oj
+
+BUNDLED WITH
+   2.1.2

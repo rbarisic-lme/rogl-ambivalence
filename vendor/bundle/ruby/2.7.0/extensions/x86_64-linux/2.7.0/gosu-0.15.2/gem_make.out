@@ -1,0 +1,267 @@
+current directory: /home/xrlabs/gosu-projects/ambivalence/vendor/bundle/ruby/2.7.0/gems/gosu-0.15.2/ext/gosu
+/home/xrlabs/.rvm/rubies/ruby-2.7.0/bin/ruby -I /home/xrlabs/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0 -r ./siteconf20201224-13112-zvxhak.rb extconf.rb
+The Gosu gem requires some libraries to be installed system-wide.
+See the following site for a list:
+https://github.com/gosu/gosu/wiki/Getting-Started-on-Linux
+checking for -lopenal... yes
+checking for AL/al.h... yes
+creating Makefile
+
+current directory: /home/xrlabs/gosu-projects/ambivalence/vendor/bundle/ruby/2.7.0/gems/gosu-0.15.2/ext/gosu
+make "DESTDIR=" clean
+
+current directory: /home/xrlabs/gosu-projects/ambivalence/vendor/bundle/ruby/2.7.0/gems/gosu-0.15.2/ext/gosu
+make "DESTDIR="
+compiling ../../src/Audio.cpp
+In file included from ../../src/Audio.cpp:2:
+../../src/OggFile.hpp:11:32: warning: unknown option after ‘#pragma GCC diagnostic’ kind [-Wpragmas]
+   11 | #pragma GCC diagnostic ignored "-Wcomma"
+      |                                ^~~~~~~~~
+compiling ../../src/AudioImpl.cpp
+compiling ../../src/Bitmap.cpp
+compiling ../../src/BitmapIO.cpp
+../../src/BitmapIO.cpp:15:32: warning: unknown option after ‘#pragma GCC diagnostic’ kind [-Wpragmas]
+   15 | #pragma GCC diagnostic ignored "-Wcomma"
+      |                                ^~~~~~~~~
+../../src/BitmapIO.cpp:96:32: warning: unknown option after ‘#pragma GCC diagnostic’ kind [-Wpragmas]
+   96 | #pragma GCC diagnostic ignored "-Wcomma"
+      |                                ^~~~~~~~~
+compiling ../../src/BlockAllocator.cpp
+compiling ../../src/Channel.cpp
+compiling ../../src/ChannelWrapper.cpp
+compiling ../../src/Color.cpp
+compiling ../../src/ColorWrapper.cpp
+compiling ../../src/Constants.cpp
+compiling ../../src/DirectoriesApple.cpp
+compiling ../../src/DirectoriesUnix.cpp
+compiling ../../src/DirectoriesWin.cpp
+compiling ../../src/FileUnix.cpp
+../../src/FileUnix.cpp: In member function ‘virtual void Gosu::File::resize(size_t)’:
+../../src/FileUnix.cpp:76:14: warning: ignoring return value of ‘int ftruncate(int, __off_t)’, declared with attribute warn_unused_result [-Wunused-result]
+   76 |     ftruncate(pimpl->fd, new_size);
+      |     ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+../../src/FileUnix.cpp: In member function ‘virtual void Gosu::File::read(size_t, size_t, void*) const’:
+../../src/FileUnix.cpp:88:15: warning: ignoring return value of ‘ssize_t read(int, void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+   88 |         ::read(pimpl->fd, dest_buffer, length);
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../src/FileUnix.cpp: In member function ‘virtual void Gosu::File::write(size_t, size_t, const void*)’:
+../../src/FileUnix.cpp:96:12: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+   96 |     ::write(pimpl->fd, source_buffer, length);
+      |     ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compiling ../../src/FileWin.cpp
+compiling ../../src/Font.cpp
+compiling ../../src/FontWrapper.cpp
+compiling ../../src/GosuGLView.cpp
+compiling ../../src/GosuViewController.cpp
+compiling ../../src/GosuWrapper.cpp
+compiling ../../src/Graphics.cpp
+compiling ../../src/IO.cpp
+compiling ../../src/Image.cpp
+compiling ../../src/ImageWrapper.cpp
+compiling ../../src/Input.cpp
+../../src/Input.cpp: In member function ‘bool Gosu::Input::Impl::feed_sdl_event(const SDL_Event*)’:
+../../src/Input.cpp:129:69: warning: comparison between ‘const enum SDL_Scancode’ and ‘enum Gosu::ButtonName’ [-Wenum-compare]
+  129 |                 if (e->key.repeat == 0 && e->key.keysym.scancode <= KB_RANGE_END) {
+      |                                                                     ^~~~~~~~~~~~
+compiling ../../src/InputUIKit.cpp
+compiling ../../src/Inspection.cpp
+compiling ../../src/LargeImageData.cpp
+compiling ../../src/Macro.cpp
+compiling ../../src/MarkupParser.cpp
+compiling ../../src/Math.cpp
+compiling ../../src/OffScreenTarget.cpp
+compiling ../../src/Resolution.cpp
+compiling ../../src/RubyGosu.cxx
+In file included from /home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby.h:33,
+                 from ../../src/RubyGosu.cxx:881:
+../../src/RubyGosu.cxx: In function ‘Gosu::Image* Gosu::render(int, int, VALUE)’:
+/home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/ruby.h:2686:46: warning: converting to non-pointer type ‘VALUE’ {aka ‘long unsigned int’} from NULL [-Wconversion-null]
+ 2686 |  const VALUE rb_funcall_args[] = {__VA_ARGS__}; \
+      |                                              ^
+../../src/RubyGosu.cxx:2398:26: note: in expansion of macro ‘rb_funcall’
+ 2398 |             VALUE keys = rb_funcall(options, rb_intern("keys"), 0, NULL);
+      |                          ^~~~~~~~~~
+In file included from /home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby.h:33,
+                 from ../../src/RubyGosu.cxx:881:
+/home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/ruby.h:2686:46: warning: converting to non-pointer type ‘VALUE’ {aka ‘long unsigned int’} from NULL [-Wconversion-null]
+ 2686 |  const VALUE rb_funcall_args[] = {__VA_ARGS__}; \
+      |                                              ^
+/home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/ruby.h:703:41: note: in definition of macro ‘RB_NUM2INT’
+  703 | #define RB_NUM2INT(x) rb_num2int_inline(x)
+      |                                         ^
+../../src/RubyGosu.cxx:2399:29: note: in expansion of macro ‘NUM2INT’
+ 2399 |             int keys_size = NUM2INT(rb_funcall(keys, rb_intern("size"), 0, NULL));
+      |                             ^~~~~~~
+../../src/RubyGosu.cxx:2399:37: note: in expansion of macro ‘rb_funcall’
+ 2399 |             int keys_size = NUM2INT(rb_funcall(keys, rb_intern("size"), 0, NULL));
+      |                                     ^~~~~~~~~~
+In file included from /home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby.h:33,
+                 from ../../src/RubyGosu.cxx:881:
+../../src/RubyGosu.cxx: In function ‘int SWIG_AsCharPtrAndSize(VALUE, char**, size_t*, int*)’:
+/home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/ruby.h:2686:46: warning: converting to non-pointer type ‘VALUE’ {aka ‘long unsigned int’} from NULL [-Wconversion-null]
+ 2686 |  const VALUE rb_funcall_args[] = {__VA_ARGS__}; \
+      |                                              ^
+../../src/RubyGosu.cxx:2687:11: note: in expansion of macro ‘rb_funcall’
+ 2687 |     obj = rb_funcall(obj, rb_intern("to_s"), 0, NULL);
+      |           ^~~~~~~~~~
+../../src/RubyGosu.cxx: In function ‘Gosu::Font* new_Gosu_Font__SWIG_1(int, VALUE)’:
+/home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/ruby.h:2686:46: warning: converting to non-pointer type ‘VALUE’ {aka ‘long unsigned int’} from NULL [-Wconversion-null]
+ 2686 |  const VALUE rb_funcall_args[] = {__VA_ARGS__}; \
+      |                                              ^
+../../src/RubyGosu.cxx:2807:26: note: in expansion of macro ‘rb_funcall’
+ 2807 |             VALUE keys = rb_funcall(options, rb_intern("keys"), 0, NULL);
+      |                          ^~~~~~~~~~
+In file included from /home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby.h:33,
+                 from ../../src/RubyGosu.cxx:881:
+/home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/ruby.h:2686:46: warning: converting to non-pointer type ‘VALUE’ {aka ‘long unsigned int’} from NULL [-Wconversion-null]
+ 2686 |  const VALUE rb_funcall_args[] = {__VA_ARGS__}; \
+      |                                              ^
+/home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/ruby.h:703:41: note: in definition of macro ‘RB_NUM2INT’
+  703 | #define RB_NUM2INT(x) rb_num2int_inline(x)
+      |                                         ^
+../../src/RubyGosu.cxx:2808:29: note: in expansion of macro ‘NUM2INT’
+ 2808 |             int keys_size = NUM2INT(rb_funcall(keys, rb_intern("size"), 0, NULL));
+      |                             ^~~~~~~
+../../src/RubyGosu.cxx:2808:37: note: in expansion of macro ‘rb_funcall’
+ 2808 |             int keys_size = NUM2INT(rb_funcall(keys, rb_intern("size"), 0, NULL));
+      |                                     ^~~~~~~~~~
+In file included from /home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby.h:33,
+                 from ../../src/RubyGosu.cxx:881:
+../../src/RubyGosu.cxx: In function ‘Gosu::Image* new_Gosu_Image(VALUE, VALUE)’:
+/home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/ruby.h:2686:46: warning: converting to non-pointer type ‘VALUE’ {aka ‘long unsigned int’} from NULL [-Wconversion-null]
+ 2686 |  const VALUE rb_funcall_args[] = {__VA_ARGS__}; \
+      |                                              ^
+../../src/RubyGosu.cxx:2859:26: note: in expansion of macro ‘rb_funcall’
+ 2859 |             VALUE keys = rb_funcall(options, rb_intern("keys"), 0, NULL);
+      |                          ^~~~~~~~~~
+In file included from /home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby.h:33,
+                 from ../../src/RubyGosu.cxx:881:
+/home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/ruby.h:2686:46: warning: converting to non-pointer type ‘VALUE’ {aka ‘long unsigned int’} from NULL [-Wconversion-null]
+ 2686 |  const VALUE rb_funcall_args[] = {__VA_ARGS__}; \
+      |                                              ^
+/home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/ruby.h:703:41: note: in definition of macro ‘RB_NUM2INT’
+  703 | #define RB_NUM2INT(x) rb_num2int_inline(x)
+      |                                         ^
+../../src/RubyGosu.cxx:2860:29: note: in expansion of macro ‘NUM2INT’
+ 2860 |             int keys_size = NUM2INT(rb_funcall(keys, rb_intern("size"), 0, NULL));
+      |                             ^~~~~~~
+../../src/RubyGosu.cxx:2860:37: note: in expansion of macro ‘rb_funcall’
+ 2860 |             int keys_size = NUM2INT(rb_funcall(keys, rb_intern("size"), 0, NULL));
+      |                                     ^~~~~~~~~~
+/home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/ruby.h:2686:46: warning: converting to non-pointer type ‘VALUE’ {aka ‘long unsigned int’} from NULL [-Wconversion-null]
+ 2686 |  const VALUE rb_funcall_args[] = {__VA_ARGS__}; \
+      |                                              ^
+/home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/ruby.h:703:41: note: in definition of macro ‘RB_NUM2INT’
+  703 | #define RB_NUM2INT(x) rb_num2int_inline(x)
+      |                                         ^
+../../src/RubyGosu.cxx:2876:37: note: in expansion of macro ‘NUM2INT’
+ 2876 |                     int rect_size = NUM2INT(rb_funcall(value, rb_intern("size"), 0, NULL));
+      |                                     ^~~~~~~
+../../src/RubyGosu.cxx:2876:45: note: in expansion of macro ‘rb_funcall’
+ 2876 |                     int rect_size = NUM2INT(rb_funcall(value, rb_intern("size"), 0, NULL));
+      |                                             ^~~~~~~~~~
+In file included from /home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby.h:33,
+                 from ../../src/RubyGosu.cxx:881:
+../../src/RubyGosu.cxx: In function ‘Gosu::Image* Gosu_Image_from_text(const string&, double, VALUE)’:
+/home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/ruby.h:2686:46: warning: converting to non-pointer type ‘VALUE’ {aka ‘long unsigned int’} from NULL [-Wconversion-null]
+ 2686 |  const VALUE rb_funcall_args[] = {__VA_ARGS__}; \
+      |                                              ^
+../../src/RubyGosu.cxx:2921:26: note: in expansion of macro ‘rb_funcall’
+ 2921 |             VALUE keys = rb_funcall(options, rb_intern("keys"), 0, NULL);
+      |                          ^~~~~~~~~~
+In file included from /home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby.h:33,
+                 from ../../src/RubyGosu.cxx:881:
+/home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/ruby.h:2686:46: warning: converting to non-pointer type ‘VALUE’ {aka ‘long unsigned int’} from NULL [-Wconversion-null]
+ 2686 |  const VALUE rb_funcall_args[] = {__VA_ARGS__}; \
+      |                                              ^
+/home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/ruby.h:703:41: note: in definition of macro ‘RB_NUM2INT’
+  703 | #define RB_NUM2INT(x) rb_num2int_inline(x)
+      |                                         ^
+../../src/RubyGosu.cxx:2922:29: note: in expansion of macro ‘NUM2INT’
+ 2922 |             int keys_size = NUM2INT(rb_funcall(keys, rb_intern("size"), 0, NULL));
+      |                             ^~~~~~~
+../../src/RubyGosu.cxx:2922:37: note: in expansion of macro ‘rb_funcall’
+ 2922 |             int keys_size = NUM2INT(rb_funcall(keys, rb_intern("size"), 0, NULL));
+      |                                     ^~~~~~~~~~
+In file included from /home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby.h:33,
+                 from ../../src/RubyGosu.cxx:881:
+../../src/RubyGosu.cxx: In function ‘std::vector<Gosu::Image> Gosu_Image_load_tiles__SWIG_0(VALUE, int, int, VALUE)’:
+/home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/ruby.h:2686:46: warning: converting to non-pointer type ‘VALUE’ {aka ‘long unsigned int’} from NULL [-Wconversion-null]
+ 2686 |  const VALUE rb_funcall_args[] = {__VA_ARGS__}; \
+      |                                              ^
+../../src/RubyGosu.cxx:2993:26: note: in expansion of macro ‘rb_funcall’
+ 2993 |             VALUE keys = rb_funcall(options, rb_intern("keys"), 0, NULL);
+      |                          ^~~~~~~~~~
+In file included from /home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby.h:33,
+                 from ../../src/RubyGosu.cxx:881:
+/home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/ruby.h:2686:46: warning: converting to non-pointer type ‘VALUE’ {aka ‘long unsigned int’} from NULL [-Wconversion-null]
+ 2686 |  const VALUE rb_funcall_args[] = {__VA_ARGS__}; \
+      |                                              ^
+/home/xrlabs/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/ruby.h:703:41: note: in definition of macro ‘RB_NUM2INT’
+  703 | #define RB_NUM2INT(x) rb_num2int_inline(x)
+      |                                         ^
+../../src/RubyGosu.cxx:2994:29: note: in expansion of macro ‘NUM2INT’
+ 2994 |             int keys_size = NUM2INT(rb_funcall(keys, rb_intern("size"), 0, NULL));
+      |                             ^~~~~~~
+../../src/RubyGosu.cxx:2994:37: note: in expansion of macro ‘rb_funcall’
+ 2994 |             int keys_size = NUM2INT(rb_funcall(keys, rb_intern("size"), 0, NULL));
+      |                                     ^~~~~~~~~~
+compiling ../../src/SampleWrapper.cpp
+compiling ../../src/SongWrapper.cpp
+compiling ../../src/TexChunk.cpp
+compiling ../../src/Text.cpp
+compiling ../../src/TextBuilder.cpp
+compiling ../../src/TextInput.cpp
+compiling ../../src/TextInputWrapper.cpp
+compiling ../../src/Texture.cpp
+compiling ../../src/TimingApple.cpp
+compiling ../../src/TimingUnix.cpp
+compiling ../../src/TimingWin.cpp
+compiling ../../src/Transform.cpp
+compiling ../../src/TrueTypeFont.cpp
+../../src/TrueTypeFont.cpp:9:32: warning: unknown option after ‘#pragma GCC diagnostic’ kind [-Wpragmas]
+    9 | #pragma GCC diagnostic ignored "-Wcomma"
+      |                                ^~~~~~~~~
+compiling ../../src/TrueTypeFontApple.cpp
+compiling ../../src/TrueTypeFontUnix.cpp
+compiling ../../src/TrueTypeFontWin.cpp
+compiling ../../src/Utility.cpp
+compiling ../../src/UtilityApple.cpp
+compiling ../../src/UtilityWin.cpp
+compiling ../../src/Version.cpp
+compiling ../../src/WinMain.cpp
+compiling ../../src/WinUtility.cpp
+compiling ../../src/Window.cpp
+compiling ../../src/WindowUIKit.cpp
+compiling ../../src/WindowWrapper.cpp
+compiling ../../src/stb_vorbis.c
+../../src/stb_vorbis.c: In function ‘start_decoder.part.0’:
+../../src/stb_vorbis.c:3953:32: warning: ‘hi’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+ 3953 |             g->neighbors[j][1] = hi;
+      |             ~~~~~~~~~~~~~~~~~~~^~~~
+../../src/stb_vorbis.c:3952:32: warning: ‘low’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+ 3952 |             g->neighbors[j][0] = low;
+      |             ~~~~~~~~~~~~~~~~~~~^~~~~
+../../src/stb_vorbis.c: In function ‘stb_vorbis_seek_frame’:
+../../src/stb_vorbis.c:4682:23: warning: ‘offset’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+ 4682 |                offset += error * 2;
+      |                ~~~~~~~^~~~~~~~~~~~
+../../src/stb_vorbis.c:4629:11: note: ‘offset’ was declared here
+ 4629 |    double offset, bytes_per_sample;
+      |           ^~~~~~
+../../src/stb_vorbis.c:4679:23: warning: ‘bytes_per_sample’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+ 4679 |                double error = ((double) sample_number - mid.last_decoded_sample) * bytes_per_sample;
+      |                       ^~~~~
+../../src/stb_vorbis.c:4629:19: note: ‘bytes_per_sample’ was declared here
+ 4629 |    double offset, bytes_per_sample;
+      |                   ^~~~~~~~~~~~~~~~
+../../src/stb_vorbis.c: At top level:
+cc1: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+compiling ../../src/utf8proc.c
+linking shared-object gosu.so
+
+current directory: /home/xrlabs/gosu-projects/ambivalence/vendor/bundle/ruby/2.7.0/gems/gosu-0.15.2/ext/gosu
+make "DESTDIR=" install
+/usr/bin/install -m 0755 gosu.so ./.gem.20201224-13112-1yh7sqe
